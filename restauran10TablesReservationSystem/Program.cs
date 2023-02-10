@@ -13,13 +13,15 @@ int currentIndex = 0;
 bool userType;
 
 Console.WriteLine("Welcome to the best restaurant in the world");
-while (true)
+while (currentIndex < 10)
 {
-    if (currentIndex == 10)
+
+    /*if (currentIndex == 10)
     {
         Console.WriteLine("The restaurant is full, try again next year.");
         Environment.Exit(0);
-    }
+    }*/
+
     Console.WriteLine("\n Are you a registered user? Write true, or false to register.");
     userType = Convert.ToBoolean(Console.ReadLine());
     if (userType == true)
@@ -44,3 +46,11 @@ while (true)
         currentIndex++;
     }
 }
+Console.WriteLine("The restaurant is full, try next year.\n These are the guest to the dinner:");
+int auxIndex = 0;
+foreach(string userName in userNames)
+{
+    Console.WriteLine("User Number {0} and user name:{1}", auxIndex+1, userNames[auxIndex]);
+    auxIndex++;
+}
+Environment.Exit(0);    
