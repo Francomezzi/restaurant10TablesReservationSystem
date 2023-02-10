@@ -8,3 +8,17 @@
 
 string[] userNames = new string[10]{ "Miguel","","","","","","","","",""};
 int currentIndex = 1;
+bool userType;
+
+Console.WriteLine("Welcome to the best restaurant in the world");
+while (true)
+{
+    Console.WriteLine("Are you a registered user? Write true, or false to register.");
+    userType = Convert.ToBoolean(Console.ReadLine());
+    if (userType == true)
+    {
+        Console.WriteLine("Hello, you are a registered user, please enter your exact user name");
+        string userToSearch = Console.ReadLine();
+        Console.WriteLine("The user you searched is {0}",userToSearch);
+    }
+}
